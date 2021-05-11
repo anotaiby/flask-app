@@ -1,0 +1,25 @@
+<!-- templates/profile.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+{% if user %}
+Welcome, {{user}}
+    {% endif %}
+   <div class=”container”>
+    <form method=post enctype=multipart/form-data>
+       <input type=file name=file onchange="loadFile(event)">
+       <input type=submit value=Upload class="btn btn-primary">
+    </form>
+</div>
+ <br></br>
+{% if data %}
+  <div class=”container”>
+      <p>{{data.pred}}</p>
+   <img src="{{ data.uploaded_img }}" width="480px" height="360px">
+  </div>
+{% endif %}
+</h1>
+{% endblock %}
