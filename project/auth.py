@@ -46,7 +46,7 @@ def signup_post():
     password = request.form.get('password')
     address = request.form.get('address')
 
-    gmaps = googlemaps.Client(key="AIzaSyB6zfB3hsh0ddUcU3REJcl4jTVHpi6dF-g")
+    gmaps = googlemaps.Client(key="Your key")
     geocode_result = gmaps.geocode(address)
     lat = geocode_result[0]["geometry"]["location"]["lat"]
     lng = geocode_result[0]["geometry"]["location"]["lng"]
