@@ -1,7 +1,7 @@
 # flask-app
 
 
-Recognize grape diseases ( Depp learning ) 
+Recognize grape diseases ( Deep learning ) 
 
 tensorflow 
 
